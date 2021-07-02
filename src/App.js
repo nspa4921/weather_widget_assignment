@@ -2,6 +2,8 @@
 import React from 'react';
 import Axios from "axios";
 import WeatherWidget from "./components/WeatherWidget";
+import Header from "./components/Header";
+
 
 import './App.css';
 
@@ -72,6 +74,7 @@ class App extends React.Component {
     render() {
       return (
         <div className="App">
+          <Header/>
             <WeatherWidget weatherData = {this.state.data}
             changeLocation = {this.change}
             changeWeather={this.changeWeather}/>
