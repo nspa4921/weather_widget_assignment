@@ -48,10 +48,33 @@ class App extends React.Component {
           }
         }
 
+        change = (value) => {
+          this.setState({ inputData: value })
+        }
+
+        changeWeather = (event) => {
+          event.preventDefault();
+
+          Axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.inputData}&units=metric&appid=166d00e26d3ff2c6149e89feccc5c59a`).then(res => {
+            
+          let weatherData = {
+              location: res.data.name,
+              temperature: res.data.main.temp,
+              humidity: res.data.main.humidity,
+              wind: res.data.wind.deg,
+              wind_speed: res.data.wind.speed,
+            }
+  
+            this.setState({data:weatherData});
+        })
+      }
+
     render() {
       return (
         <div className="App">
-            <WeatherWidget weatherData = {this.state.data}/>
+            <WeatherWidget weatherData = {this.state.data}
+            changeLocation = {this.change}
+            changeWeather={this.changeWeather}/>
         </div>
       );
     }

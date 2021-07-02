@@ -16,9 +16,9 @@ export default function WeatherWidget(props) {
                     <li className="list-group-item">Humidity: {humidity}</li>
                     <li className="list-group-item">Wind {wind} <b>m/s</b></li>
                     <li className="list-group-item">
-                    <form>
+                    <form onSubmit={(e) => props.changeWeather(e)}>
                     <label>
-                        <input type="text" name="City" id="city" placeholder="City" />
+                        <input type="text" name="City" id="city" placeholder="City" onChange={(e) => props.changeLocation(e.target.value)}/>
                         </label>
                         <input className="button" type="submit" value="Search" />
                     </form>
