@@ -68,10 +68,10 @@ input[type="text"] {
 
 .button {
   position: relative;
-  background-color: white;
+  background-color: transparent;
   color: black;
   border-radius: 3px;
-  border: 1px;
+  border: 1px solid black;
   padding: 5px;
   text-align: center;
   transition-duration: 0.4s;

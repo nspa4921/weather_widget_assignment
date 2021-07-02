@@ -15,7 +15,8 @@ class App extends React.Component {
       latitude: 45,
       longitude: 60
     },
-    data: {}
+    data: {},
+    inputData: ""
   }
 
   componentDidMount() {
