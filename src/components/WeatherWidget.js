@@ -3,7 +3,7 @@ import React from 'react'
 export default function WeatherWidget(props) {
 
     // console.log(props.weatherData)
-    const { location, temperature, humidity, wind, wind_speed} = props.weatherData;
+    const { location, temperature, humidity, wind } = props.weatherData;
 
     return (
         <div className="widget">
