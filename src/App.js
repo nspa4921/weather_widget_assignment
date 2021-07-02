@@ -51,7 +51,7 @@ class App extends React.Component {
     render() {
       return (
         <div className="App">
-            <WeatherWidget />
+            <WeatherWidget weatherData = {this.state.data}/>
         </div>
       );
     }
