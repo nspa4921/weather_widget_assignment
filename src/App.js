@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Axios from "axios";
+import WeatherWidget from "./components/WeatherWidget";
 
 import './App.css';
 
@@ -11,7 +12,8 @@ class App extends React.Component {
     coords:{
       latitude: 45,
       longitude: 60
-    }
+    },
+    data: {}
   }
 
   componentDidMount() {
@@ -49,7 +51,7 @@ class App extends React.Component {
     render() {
       return (
         <div className="App">
-            Weather widget
+            <WeatherWidget />
         </div>
       );
     }

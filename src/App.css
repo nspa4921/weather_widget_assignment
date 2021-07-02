@@ -1,38 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: AlrightSansLT-Regular, "helvetica neue", helvetica, arial,
+    sans-serif;
+  color: rgb(53, 53, 53);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
 .App {
+  height: 100vh;
+  width: 100%;
+}
+
+.input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 0 50px 0 0px;
+  outline: none;
+}
+
+.input::placeholder {
+  font-weight: 600;
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+.widget {
+  margin-top: 100px;
+  margin-left: 10%;
+  width: 300px;
+}
+
+.panel {
+  display: block;
+}
+
+.panel-info {
+  border-left: 1px solid rgb(31, 146, 212);
+  border-right: 1px solid rgb(31, 146, 212);
+  border-bottom: 1px solid rgb(31, 146, 212);
+}
+
+.panel-heading {
+  background-color: rgb(31, 146, 212);
+  list-style: none;
+  padding: 10px;
+}
+
+.list-group .list-group-item {
+  border: 0.8px solid rgb(180, 180, 180);
+  list-style: none;
+  padding: 10px;
+}
+
+input[type="text"] {
+  color: black;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.button {
+  position: relative;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  border: 1px;
+  padding: 5px;
   text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.tv2-header {
+  width: 100%;
+  height: 6.5rem;
+  background-color: #fff;
+  border-bottom: 1px solid black;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tv2-logo {
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 2;
+  margin: auto;
+  width: 9rem;
 }
